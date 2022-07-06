@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+  <%console.log('Exibindo página soma.ejs')%>
+  <head>
+    <meta charset="utf-8" />
+    <title>Calculadora</title>
+  </head>
+  <body>
+    <form action="/operacao" method="get">
+      <label> Nome </label>
+      <input id="nome" name="nome" />
+      <br />
+      <label> Valor 1 </label>
+      <input id="n1" name="n1" /><br />
+      <label> Valor 2 </label>
+      <input id="n2" name="n2" />
+      <label> Operação </label><br />
+      <input id="op" name="op" />
+      <button type="submit">+</button>
+    </form>
+    <% if( typeof(x) !="undefined" ){ %>
+    <h1>Resultado:</h1>
+    <h3 id="resultado" name="resultado"><%=x%></h3>
+    <% } else { %>
+    <h4>aguardando valores...</h4>
+    <% } %>
+  </body>
+</html>
