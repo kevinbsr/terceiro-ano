@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Soma</title>
+
+    <script type="text/javascript">
+      function soma(x, y) {
+        console.log('vai somar: ' + x + '+' + y)
+        document.getElementById('resultado').innerHTML = ''
+        if (!ehInteiro(x)) {
+          alert('Valor 1 não é um número inteiro!')
+        }
+        if (!ehInteiro(y)) {
+          alert('Valor 2 não é um número inteiro!')
+        }
+        if (ehInteiro(x) && ehInteiro(y)) {
+          document.getElementById('resultado').innerHTML =
+            parseInt(x) + parseInt(y)
+        }
+      }
+
+      function ehInteiro(n) {
+        console.log(Number.isInteger(parseInt(n)))
+        return Number.isInteger(parseInt(n))
+      }
+    </script>
+
+  </head>
+  <body>
+    <h1>Calculador (só faz soma, por enquanto!)</h1>
+    
+    <form action="https://www.google.com">
+      <label>Valor 1: </label>
+      <input placeholder="Digite um inteiro" id="num1" />
+      <br />
+      <label>Valor 2: </label>
+      <input placeholder="Digite outro inteiro" id="num2" />
+      <br />
+      <button
+        type="button"
+        onclick="soma(document.getElementById('num1').value, document.getElementById('num2').value)"
+      >
+        Somar
+      </button>
+      <button type="reset">Limpa</button>
+      <br />
+    </form>
+
+    <h2 id="resultado"></h2>
+  </body>
+</html>

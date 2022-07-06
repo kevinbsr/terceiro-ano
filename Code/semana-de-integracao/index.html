@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=S, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #colorBox {
+        height: 100px;
+        width: 100px;
+        background-color: red;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="colorBox"></div>
+
+    <button onclick="changeToGreen()">change to green</button>
+    <button onclick="changeToBlue()">change to blue</button>
+
+    <script>
+      function changeToGreen() {
+        document.getElementById('colorBox').style.backgroundColor = 'green'
+      }
+      function changeToBlue() {
+        document.getElementById('colorBox').style.backgroundColor = 'blue'
+      }
+    </script>
+  </body>
+</html>
