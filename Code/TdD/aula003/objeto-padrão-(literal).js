@@ -22,7 +22,7 @@ const produto = {
     this.variacao.quantidade -= 10
   },
   getQuantidade: () => {
-    this.variacao.quantidade = setSoma(), setSubtrai()
+    this.variacao.quantidade = setSoma(), setSubtrai()   
   }
 }
 
