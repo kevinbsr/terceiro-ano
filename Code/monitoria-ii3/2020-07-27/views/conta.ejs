@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Calculadora</title>
+  <script>
+   function soma() {
+    result = parseFloat(n1.value) + parseFloat(n2.value);
+    document.getElementById("op").volue = '+';
+   }
+   function subtracao() {
+   // result = parseFloat(n1.value) - parseFloat(n2.value);
+    document.getElementById("op").value = '-';
+   }
+   function multiplicacao() {
+    result = parseFloat(n1.value) * parseFloat(n2.value);
+    document.getElementById("op").volue = 'x';
+   }
+   function divisao() {
+    result = parseFloat(n1.value) / parseFloat(n2.value);
+    document.getElementById("op").volue = '/';
+   }
+   function fatorial(n) {
+    if (n == 0) {
+     return 1;
+    }
+    var resp = n;
+    while (n > 2) {
+     resp *= --n;
+     result = resp;
+    }
+    document.getElementById("resultado").innerHTML = result;
+   }
+  </script>
+ </head>
+ <body>
+  <h1>Digite dois números:</h1>
+  <form> method= "get" action= "/operacoes">
+   <label> Número 1: </label>
+   <input id= "n1" name= "N1"/>
+   <label> numero 2: </label>
+   <input id= "n2" name= "N2"/>
+
+   
+   <input type= hidder id="op" name= "op"/>
+
+   <button type="button"  onclick="fatorial(n1.value)">Fatorial do Número 1: </button>
+   <button type="submit" >Somar</button>
+   <button type="submit" onclick="subtracao()">Subtrair</button>
+   <button type="submit" onclick="multiplicacao()">Multiplicar</button>
+   <button type="submit" onclick="divisao()">Dividir</button>
+  </form>
+  <% if (typeof(conta) == 'undefined'){ %>
+  <% }else{ %>
+  <%}%>
+  <h1>Resultado:</h1  >
+    <h1 id="resultado"></h1> "|||||||||||||||||"
+    <%=soma%>
+ </body>
+</html>
