@@ -10,4 +10,4 @@ const funcionario1 = new criarFuncionario('Kevin', 1000, 10)
 const funcionario2 = new criarFuncionario('João', 2000, 20)
 const funcionario3 = new criarFuncionario('Maria', 3000, 30)
 
-console.log(funcionario1, funcionario2, funcionario3);
+console.log(funcionario1, '\n', funcionario2, '\n', funcionario3);
