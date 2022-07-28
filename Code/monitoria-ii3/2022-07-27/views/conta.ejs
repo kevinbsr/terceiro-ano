@@ -34,7 +34,8 @@
  </head>
  <body>
   <h1>Digite dois números:</h1>
-  <form> method= "get" action= "/operacoes">
+  
+  <form> method="get" action="/operacoes">
    <label> Número 1: </label>
    <input id= "n1" name= "N1"/>
    <label> numero 2: </label>
@@ -49,11 +50,11 @@
    <button type="submit" onclick="multiplicacao()">Multiplicar</button>
    <button type="submit" onclick="divisao()">Dividir</button>
   </form>
-  <% if (typeof(conta) == 'undefined'){ %>
-  <% }else{ %>
-  <%}%>
-  <h1>Resultado:</h1  >
-    <h1 id="resultado"></h1> "|||||||||||||||||"
-    <%=soma%>
+  
+  <h1>Resultado:</h1>
+
+  <h1 id="resultado">
+    
+  </h1>
  </body>
 </html>

@@ -1,8 +1,8 @@
 const express = require('express')
 const app = express()
-const ejsLint = require('ejs-lint');
 app.use(express.urlencoded({ extended: true }))
 app.set('view engine', 'ejs')
+
 app.get('/', (req, res) => {
   res.render('conta')
 })
