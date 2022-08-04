@@ -2,22 +2,19 @@
  <head>
   <meta charset="UTF-8">
   <title>Calculadora</title>
+  
   <script>
    function soma() {
-    result = parseFloat(n1.value) + parseFloat(n2.value);
-    document.getElementById("resultado").innerHTML = result;
+    document.getElementById("op").value = 'soma';
    }
    function subtracao() {
-    result = parseFloat(n1.value) - parseFloat(n2.value);
-    document.getElementById("resultado").innerHTML = result;
+    document.getElementById("op").value = 'subtracao';
    }
    function multiplicacao() {
-    result = parseFloat(n1.value) * parseFloat(n2.value);
-    document.getElementById("resultado").innerHTML = result;
+    document.getElementById("op").value = 'multiplicacao';
    }
    function divisao() {
-    result = parseFloat(n1.value) / parseFloat(n2.value);
-    document.getElementById("resultado").innerHTML = result;
+    document.getElementById("op").value = 'divisao';
    }
    function fatorial(n) {
     if (n == 0) {
@@ -31,23 +28,32 @@
     document.getElementById("resultado").innerHTML = result;
    }
   </script>
+
  </head>
  <body>
   <h1>Digite dois números:</h1>
+  
   <form method="get" action="/operacoes">
    <label> Número 1: </label>
    <input id="n1" name="N1"/>
+   
    <label> Número 2: </label>
-   <input id= "n2" name="N2"/>
+   <input id="n2" name="N2"/>
+ 
+   <input id="op" name="operacao" type="hidden"/>
+
    <button type="button" onclick="fatorial(n1.value)">Fatorial do Número 1: </button>
-   <button type="submit" id="soma" >Somar</button>
-   <button type="submit" >Subtrair</button>
-   <button type="button" onclick="multiplicacao()">Multiplicar</button>
-   <button type="button" onclick="divisao()">Dividir</button>
+   
+   <button type="submit" onclick="soma()" id="soma">Somar</button>
+   <button type="submit" onclick="subtracao()" id="subtracao">Subtrair</button>
+   <button type="submit" onclick="multiplicacao()" id="multiplicacao">Multiplicar</button>
+   <button type="submit" onclick="divisao()" id="divisao">Dividir</button>
   </form>
+  
   <h1>Resultado:</h1>
+
   <h1 id="resultado">
-    <%soma%>
+    <%=result%>
   </h1>
  </body>
 </html>

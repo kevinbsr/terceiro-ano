@@ -11,18 +11,25 @@ app.get('/', (requisicao, resposta) => {
 app.get('/operacoes', (req, res) => {
   //result = parseFloat(n1.value) + parseFloat(n2.value);
   //document.getElementById("resultado").innerHTML = result;
-  console.log('/operacoes');
-  
-  if ( == 'soma') {
-    let soma = parseFloat(req.query.N1) + parseFloat(req.query.N2)
-    console.log('Resultado: ' + soma)
-    res.render('conta', { soma: soma })
-  } else if (req.query.operacao == 'subtracao') {
-    let sub = parseFloat(req.query.N1) - parseFloat(req.query.N2)
-    console.log('Resultado: ' + sub)
-    res.render('conta', { subtracao: sub })
+
+  if (req.query.operacao == 'soma') {
+    let soma = parseFloat(req.query.N1) + parseFloat(req.query.N2);
+    console.log('Resultado: ' + soma);
+    res.render('conta', {result: soma});
+  } else if (req.query.operacao = 'subtracao') {
+    let subtracao = parseFloat(req.query.N1) - parseFloat(req.query.N2);
+    console.log('Resultado: ' + subtracao);
+    res.render('conta', {result: subtracao})
+  } else if (req.query.opercao = 'multiplicacao') {
+    let multiplicacao = parseFloat(req.query.N1) * parseFloat(req.query.N2)
+    console.log('Resultado: ' + multiplicacao);
+    req.render('conta', {result: multiplicacao})
+  } else if (req.query.operacao = 'divisao') {
+    let divisao = parseFloat(req.query.N1) / parseFloat(req.query.N2)
+    console.log('Resultado: ' + divisao)
+    req.render('conta', {result: divisao})
   }
 })
 
 console.log('Servidor funcionando...')
-app.listen(8080)
+app.listen(8888)
