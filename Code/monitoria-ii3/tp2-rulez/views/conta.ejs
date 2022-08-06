@@ -1,59 +1,48 @@
+<!-- ./views/conta.ejs -->
+
 <!DOCTYPE html>
- <head>
-  <meta charset="UTF-8">
-  <title>Calculadora</title>
-  
-  <script>
-   function soma() {
-    document.getElementById("op").value = 'soma';
-   }
-   function subtracao() {
-    document.getElementById("op").value = 'subtracao';
-   }
-   function multiplicacao() {
-    document.getElementById("op").value = 'multiplicacao';
-   }
-   function divisao() {
-    document.getElementById("op").value = 'divisao';
-   }
-   function fatorial(n) {
-    if (n == 0) {
-     return 1;
-    }
-    var resp = n;
-    while (n > 2) {
-     resp *= --n;
-     result = resp;
-    }
-    document.getElementById("resultado").innerHTML = result;
-   }
-  </script>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Calculadora</title>
+    <script>
+      function soma() {
+        document.getElementById('op').value = 'soma'
+      }
+      function subtracao() {
+        document.getElementById('op').value = 'subtracao'
+      }
+      function multiplicacao() {
+        document.getElementById('op').value = 'multiplicacao'
+      }
+      function divisao() {
+        document.getElementById('op').value = 'divisao'
+      }
+      function fatorial() {
+        document.getElementById('op').value = 'fatorial'
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Digite dois números</h1>
+    <form method="get" action="/operacoes">
+      <label for="N1">Número 1: </label>
+      <input id="n1" name="N1" />
 
- </head>
- <body>
-  <h1>Digite dois números:</h1>
-  
-  <form method="get" action="/operacoes">
-   <label> Número 1: </label>
-   <input id="n1" name="N1"/>
-   
-   <label> Número 2: </label>
-   <input id="n2" name="N2"/>
- 
-   <input id="op" name="operacao" type="hidden"/>
+      <label for="N2">Número 2: </label>
+      <input id="n2" name="N2" />
 
-   <button type="button" onclick="fatorial(n1.value)">Fatorial do Número 1: </button>
-   
-   <button type="submit" onclick="soma()" id="soma">Somar</button>
-   <button type="submit" onclick="subtracao()" id="subtracao">Subtrair</button>
-   <button type="submit" onclick="multiplicacao()" id="multiplicacao">Multiplicar</button>
-   <button type="submit" onclick="divisao()" id="divisao">Dividir</button>
-  </form>
-  
-  <h1>Resultado:</h1>
+      <input id="op" name="operacao" type="hidden" />
 
-  <h1 id="resultado">
-    <%=result%>
-  </h1>
- </body>
+      <button type="submit" onclick="fatorial()">Fatorial do Número 1:</button>
+
+      <button type="submit" onclick="soma()">Somar</button>
+      <button type="submit" onclick="subtracao()">Subtrair</button>
+      <button type="submit" onclick="multiplicacao()">Multiplicar</button>
+      <button type="submit" onclick="divisao()">Dividir</button>
+    </form>
+
+    <h1>Resultado:</h1>
+    <h1 id="resultado"><%=result%></h1>
+  </body>
 </html>
