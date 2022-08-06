@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+      body {
+        background-color: #202024;
+        color: #E1E1E6;
+        font-family: 'Roboto', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      form {
+        margin: 0 auto;
+        width: 20rem;
+        display: flex;
+        flex-direction: column;
+      }
+      label {
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+      }
+      input, select {
+        height: 36px;
+        border-radius: 6px;
+        padding:  8px 16px;
+        margin-bottom: 1rem;
+        background-color: #121214;
+        color: #E1E1E6;
+        border: none;
+      }
+      button {
+        font-size: 1rem;
+        font-weight: 600;
+        min-height: 36px;
+        border-radius: 6px;
+        padding:  16px 16px;
+        margin-bottom: 1rem;
+        background-color: #00875F;
+        color: #E1E1E6;
+        border: none;
+      }
+      button:hover {
+        cursor: pointer;
+        background-color: #007048;
+        transition: all 0.3s ease-in-out;
+      }
+      h1 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+        color: #00875F;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Cadastro de novo usuário</h1>
+    <form method="post">
+      <label for="nome">Nome: </label>
+      <input id="nome" name="nome" />
+
+      <label for="nascimento">Data de nascimento: </label>
+      <input type="date" id="nascimento" name="nascimento" />
+
+      <label for="cpf">CPF: </label>
+      <input type="text" name="cpf" id="cpf">
+
+      <label for="sexo">Sexo: </label>
+      <select name="sexo" id="sexo" >
+        <option value="M">Masculino</option>
+        <option value="F">Feminino</option>
+        <option value="O">Outro</option>
+      </select>
+
+      <label for="estadoCivil">Estado Civil</label>
+      <select name="estadoCivil" id="estadoCivil">
+        <option value="S">Solteiro</option>
+        <option value="C">Casado</option>
+        <option value="D">Divorciado</option>
+        <option value="V">Viúvo</option>
+      </select>
+      
+      <label for="telefone">Número de telefone: </label>
+      <input type="text" name="telefone" id="telefone">
+
+      <label for="email">Email: </label>
+      <input type="email" id="email" name="email" />
+
+      <label for="senha">Senha: </label>
+      <input type="password" id="senha" name="senha" />
+
+      <label for="confirmar">Confirmar senha: </label>
+      <input type="password" id="confirmar" name="confirmarSenha" />
+
+      <label for="endereco">Seu endereço: </label>
+      <input type="text" id="endereco" name="endereco" />
+
+      <button type="submit">Cadastrar</button>
+    </form>
+  </body>
+</html>
