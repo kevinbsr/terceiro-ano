@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+  <%console.log('Exibindo página sucesso.ejs')%>
+  <head>
+    <meta charset="utf-8" />
+    <title>Calculadora - Resultado</title>
+  </head>
+
+  <body>
+    <% if( typeof(x) !="undefined" ){ %>
+    <h1>Resultado:</h1>
+    <h3 id="resultado" name="resultado"><%=x%></h3>
+    <% } else { %>
+    <h4>Algo deu errado...</h4>
+    <% } %>
+    <a href="/">Voltar</a>
+  </body>
+</html>

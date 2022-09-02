@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora</title>
+  <script>
+    function defineOperacao(operacao){
+      document.getElementById('op').value = operacao
+    }
+    function defineRota(rota){
+      document.getElementById('contas').action = rota
+    }
+  </script>
+</head>
+<body>
+  <form action="/operacao" method="post" id="contas">
+    <label for="name">Name: </label>
+    <input type="text" name="name" value="<%=name%>">
+    
+    <label for="n1">Number 1: </label>
+    <input type="text" name="n1" value="<%=a%>">
+
+    <label for="n2">Number 2: </label>
+    <input type="text" name="n2" value="<%=b%>">
+
+    <input type="hidden" name="op" id="op">
+
+    <button type="submit" onclick="defineOperacao('+')"> + </button>
+    <button type="submit" onclick="defineOperacao('-')"> - </button>
+    <button type="submit" onclick="defineOperacao('*')"> * </button>
+    <button type="submit" onclick="defineOperacao('/')"> / </button>
+    <button type="submit" onclick="defineRota('/fatorial')"> ! </button>
+  </form>
+  <% if(typeof x != 'undefined') { %>
+    <h1>Resultado: </h1>
+    <h3 id="resultado" name="resultado"><%=x%></h3>
+  <% } else { %>
+    <h4>Aguardando valores...</h4>
+  <% } %>
+</body>
+</html>

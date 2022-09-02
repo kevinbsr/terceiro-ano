@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+  <%console.log('Exibindo página operacoes.ejs')%>
+  <head>
+    <meta charset="utf-8" />
+    <title>Calculadora</title>
+    <script>
+      function defineOperacao(operacao) {
+        document.getElementById('op').value = operacao
+      }
+      function defineRota(rota) {
+        document.getElementById('contas').action = rota
+      }
+    </script>
+  </head>
+
+  <body>
+    <form action="/operacao" method="post" id="contas">
+      <label> Nome </label>
+      <input id="nome" name="nome" value="<%=nome%>" />
+      <br />
+      <label> Valor 1 </label>
+      <input id="n1" name="n1" value="<%=a%>" /><br />
+      <label> Valor 2 </label>
+      <input id="n2" name="n2" value="<%=b%>" /><br />
+      <!--label> Operação </label>
+      <input id="op" name="op" readonly/-->
+      <input id="op" name="op" type="hidden" />
+      <br />
+      <button type="submit" onclick="defineOperacao('+')">+</button>
+      <button type="submit" onclick="defineOperacao('-')">-</button>
+      <button type="submit" onclick="defineOperacao('x')">x</button>
+      <button type="submit" onclick="defineOperacao('/')">/</button>
+      <button type="submit" onclick="defineRota('/fatorial')">!</button>
+    </form>
+    <% if( typeof(x) !="undefined" ){ %>
+    <h1>Resultado:</h1>
+    <h3 id="resultado" name="resultado"><%=x%></h3>
+    <% } else { %>
+    <h4>aguardando valores...</h4>
+    <% } %>
+  </body>
+</html>

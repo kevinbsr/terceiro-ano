@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+ <style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+  body {
+    font-family: Roboto;
+    background-color: #1e1e1e;
+    color: white;
+  }
+  form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+  }
+  label {
+    font-weight: 500;
+  }
+  input {
+    margin-block: 8px;
+    height: 1.8rem;
+    border-radius: 12px;
+    padding-inline: 10px;
+    border: 1px solid #5667F9;
+    color: black;
+    
+  }
+  #submit {
+    background-color: #5667F9;
+  }
+  #submit:hover {
+    background-color: #9756f9;
+    transition: 500ms all ease-in-out;
+    cursor: pointer;
+  }
+  </style>
+</head>
+<body>
+  <form method="post">
+    <label for="nome">Nome: </label>
+    <input type="text" name="nome" id="nome">
+
+    <label for="email">Email: </label>
+    <input type="email" name="email" id="email">
+
+    <label for="bornDate">Data de nascimento: </label>
+    <input type="date" name="bornDate" id="bornDate">
+
+    <label for="cpf">CPF: </label>
+    <input type="text" name="cpf" id="cpf">
+
+    <label for="tel">Telefone: </label>
+    <input type="tel" name="tel" id="tel">
+
+    <label for="city">Cidade: </label>
+    <input type="text" name="city" id="city">
+
+    <label for="state">Estado: </label>
+    <input type="text" name="state" id="state">
+
+    <label for="country">País: </label>
+    <input type="text" name="country" name="country">
+
+    <label for="senha">Senha: </label>
+    <input type="password" name="senha" id="senha">
+
+    <label for="confirmarSenha">Confirmar Senha: </label>
+    <input type="password" name="confirmarSenha" id="confirmarSenha">
+
+    <input type="submit" id="submit" value="Cadastrar">
+  </form>
+    
+  </form>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+  <%console.log('Exibindo página log.ejs')%>
+  <head>
+    <meta charset="utf-8" />
+    <title>Calculadora - Resultados</title>
+  </head>
+
+  <body>
+    <form action="/log" method="post" id="contas">
+      <label> Nome </label>
+      <input id="nome" name="nome" />
+      <br />
+      <button type="submit">Pesquisar</button>
+    </form>
+    <% if( typeof(x) !="undefined" ){ %>
+    <h3 id="mensagem" name="mensagem"><%=x%></h3>
+    <% } %>
+  </body>
+</html>
+L
