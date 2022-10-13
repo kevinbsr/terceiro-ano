@@ -1,0 +1,19 @@
+Qual seria a diferença entre utilizar um arquivo .HTML e .EJS num servidor?
+
+Qual a diferença entre o método GET e o método POST?
+
+Qual seria a estrutura para acessar informações do front-end da aplicação pelo back-end utilizando o método POST? (ex.: req.body.name)
+
+Como podemos setar a porta de exibição da nossa aplicação e mostrar uma mensagem de que o sistema está funcionando na CLI? (ex.: app.listen(4000, () => console.log('Servidor rodando...')))
+
+Qual seria a estrutura para requerir uma biblioteca para ser utilizada em nosso código? (ex.: const read = required('readline-sync'))
+
+app.listen(4000, () => console.log('Servidor rodando...'))
+
+app.listen(https:4000, = () => console.log('Servidor rodando...'))
+
+app.listen(localhost:4000, function(){console.log('Servidor rodando...'}))
+
+app.listen(4000, function(){console.log('Servidor rodando...'}))
+
+app.listen(localhost:4000, = (){console.log('Servidor rodando...'}))
