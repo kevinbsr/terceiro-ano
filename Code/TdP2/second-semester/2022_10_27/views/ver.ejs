@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+<%console.log('Exibindo página ver.ejs')%>
+<head>
+  <meta charset="utf-8">
+  <title>Calculadora</title>
+</head>
+
+<body>
+  Nome: <%=nome%> <br>
+  Valor 1: <%=a%> <br>
+  Valor 2: <%=b%> <br>
+  <%=x%>
+  
+  <br>
+  <a href="/editar?nome=<%=nome%>">Editar esta conta</a> | <a href="/log">Voltar</a>
+</body>
+
+</html>

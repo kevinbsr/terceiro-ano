@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Usuário</title> 
+</head>
+
+<body>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <%- include ("cabecalho")%>
+  
+    <form method="post">
+
+        <label for="Nome">Nome Completo: </label>
+        <input type="text" name="nome" id="nome" value="<%=cadastro.nome%">
+
+        <label for="Nome">Data de Nascimento: </label>
+        <input type="date" name="data" id="data" value="<%=cadastro.data%">
+
+        <label for="Idade">Idade: </label>
+        <input type="number" name="idade" id="idade" value="<%=cadastro.idade%">
+
+        <label for="CPF">CPF: </label>
+        <input type="number" name="cpf" id="cpf" value="<%=cadastro.cpf%">
+
+        <label for="RG">RG: </label>
+        <input type="numero" name="rg" id="rg" value="<%=cadastro.rg%">
+
+        <label for="E-mail">E-mail:  </label>
+        <input type="email" name="email" id="email" value="<%=cadastro.email%">
+
+        <label for="Senha">Senha: </label>
+        <input type="password" name="senha" id="senha" value="<%=cadastro.senha%">
+
+        <label for="ConfirmaSenha">Confirme sua senha: </label>
+        <input type="password" name="csenha" id="csenha" value="<%=cadastro.csenha%">
+ 
+        <label for="Telefone">Telefone: </label>
+        <input type="tel" name="tel" id="tel" value="<%=cadastro.tel%">
+
+        <input type="submit">
+
+    </form>
+    
+    <%- include ("rodape")%>
+    
+</body>
+</html>

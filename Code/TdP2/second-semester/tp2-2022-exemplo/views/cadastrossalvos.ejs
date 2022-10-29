@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<head>
+    <title>Cadastros Salvos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <%- include ("cabecalho")%>
+<%if (typeof(cadastros) == 'undefined' || cadastros.lenght == 0) {%>
+<h2>Não há cadastro.</h2>
+<%} else {%>
+<h1>Cadastros Salvos: </h1>
+    <% cadastros.forEach(cadastro => {%>
+      <a href="/cadastro2?nome=<%=cadastro%>"><%=cadastro.split(".txt")[0]%></a><br>
+    <%})%>
+<%}%>
+  <%- include ("rodape")%>
+</body>
+</html>
