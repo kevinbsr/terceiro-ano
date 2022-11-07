@@ -10,7 +10,7 @@
 <%} else {%>
 <h1>Cadastros Salvos: </h1>
     <% cadastros.forEach(cadastro => {%>
-      <a href="/cadastro2?nome=<%=cadastro%>"><%=cadastro.split(".txt")[0]%></a><br>
+      <a href="/cadastro?nome=<%=cadastro%>"><%=cadastro.split(".txt")[0]%></a><br>
     <%})%>
 <%}%>
   <%- include ("rodape")%>

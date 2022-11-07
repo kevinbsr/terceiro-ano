@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Cadastro de novo usuário</h1>
+    <form method="post">
+      <label for="nome">Nome: </label>
+      <input id="nome" name="nome" />
+
+      <label for="nascimento">Data de nascimento: </label>
+      <input type="date" id="nascimento" name="nascimento" />
+
+      <label for="cpf">CPF: </label>
+      <input type="text" name="cpf" id="cpf">
+
+      <label for="sexo">Sexo: </label>
+      <select name="sexo" id="sexo" >
+        <option value="M">Masculino</option>
+        <option value="F">Feminino</option>
+        <option value="O">Outro</option>
+      </select>
+
+      <label for="estadoCivil">Estado Civil</label>
+      <select name="estadoCivil" id="estadoCivil">
+        <option value="S">Solteiro</option>
+        <option value="C">Casado</option>
+        <option value="D">Divorciado</option>
+        <option value="V">Viúvo</option>
+      </select>
+      
+      <label for="telefone">Número de telefone: </label>
+      <input type="text" name="telefone" id="telefone">
+
+      <label for="email">Email: </label>
+      <input type="email" id="email" name="email" />
+
+      <label for="senha">Senha: </label>
+      <input type="password" id="senha" name="senha" />
+
+      <label for="confirmar">Confirmar senha: </label>
+      <input type="password" id="confirmar" name="confirmarSenha" />
+
+      <label for="endereco">Seu endereço: </label>
+      <input type="text" id="endereco" name="endereco" />
+
+      <button type="submit" value="Cadastrar">Cadastrar</button>
+      
+      <a href="/cadastros"><button type="button">Visualizar cadastros salvos</button></a>
+    </form>
+  </body>
+</html>

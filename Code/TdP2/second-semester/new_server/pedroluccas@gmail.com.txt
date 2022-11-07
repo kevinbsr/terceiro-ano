@@ -1,0 +1,1 @@
+{"nome":"Pedro","nascimento":"2019-09-23","cpf":"123456789","sexo":"M","estadoCivil":"S","telefone":"123456789","email":"pedroluccas@gmail.com","senha":"123456","confirmarSenha":"123456","endereco":"Rua Salvadora Maria da Conceição, 49"}
