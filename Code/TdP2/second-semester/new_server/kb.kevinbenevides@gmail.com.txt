@@ -1,1 +1,1 @@
-{"nome":"Kevin","nascimento":"2004-04-16","cpf":"2007016705","sexo":"M","estadoCivil":"S","telefone":"22999417663","email":"kb.kevinbenevides@gmail.com","senha":"123456","confirmarSenha":"123456","endereco":"Rua Salvadora Maria Da Conceição, 49"}
+{"nome":"Kevin Benevides da Silva","nascimento":"2004-04-16","cpf":"20070615705","sexo":"M","estadoCivil":"S","telefone":"22999417663","email":"kb.kevinbenevides@gmail.com","senha":"123","confirmarSenha":"123","endereco":"Rua Salvadora Maria Da Conceição, 49"}

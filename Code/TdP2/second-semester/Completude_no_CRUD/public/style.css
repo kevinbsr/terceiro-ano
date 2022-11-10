@@ -15,7 +15,16 @@ body {
   align-items: center;
   padding: 3rem;
 }
-
+form {
+  margin: 0 auto;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+}
+label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
 input,
 select {
   height: 3rem;
@@ -26,22 +35,7 @@ select {
   color: #e1e1e6;
   border: none;
 }
-
-a {
-  display: flex;
-  text-decoration: none;
-  color: white;
-  background-color: #005e87;
-  padding: 1rem;
-  border-radius: 6px;
-  width: 30rem;
-  align-items: center;
-  justify-content: center;
-  word-break: break-all;
-  margin-top: 1rem;
-}
-
-#returnButton,
+a,
 button {
   display: flex;
   align-items: center;
@@ -49,7 +43,6 @@ button {
   font-size: 1rem;
   font-weight: 600;
   min-height: 36px;
-  max-width: 15rem;
   border-radius: 6px;
   padding: 16px 16px;
   margin-bottom: 1rem;
@@ -58,7 +51,7 @@ button {
   border: none;
   text-decoration: none;
 }
-#returnButton:hover, button:hover {
+a:hover, button:hover {
   cursor: pointer;
   background-color: #007048;
   transition: all 0.3s ease-in-out;

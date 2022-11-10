@@ -13,12 +13,12 @@
     <%} else {%>
     <h1>Cadastros Salvos: </h1>
         <% cadastros.forEach(cadastro => {%>
-          <a href="/visualizar?nome=<%=cadastro%>"><%=cadastro.split(".txt")[0]%></a>
-          <a href="/deletarCadastro?nome=<%=cadastro%>">DELETAR</a>
+          <a href="/cadastro?nome=<%=cadastro%>"><%=cadastro.split(".txt")[0]%></a> 
+          <a href="/deletarCadastro?nome=<%=cadastro.split('.txt')[0]%>">deletar</a>
           <br>
         <%})%>
     <%}%>
 
     <a href="/" id="returnButton">Fazer novo cadastro</a>
 </body>
-</html> 
+</html>
