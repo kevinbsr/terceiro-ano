@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+
+<head>
+<meta charset="utf-8">
+<title>Calculadora - Resultado</title>
+</head>
+
+<body>
+<%- include('cabecalho') %>
+<% if( typeof(x) !="undefined" ){ %>
+<h1>Resultado:</h1>
+<h3 id="resultado" name="resultado">
+<%=x%>
+</h3>
+<% } else { %>
+<h4>Algo deu errado...</h4>
+<% } %>
+
+<%- include('rodape') %>
+</body>
+
+</html>

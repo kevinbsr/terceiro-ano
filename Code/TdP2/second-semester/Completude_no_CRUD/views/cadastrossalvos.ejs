@@ -1,24 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="cadastros.css">
-  <title>Cadastros Salvos</title>
-</head>
-<body>
-  <%if (typeof(cadastros) == 'undefined' || cadastros.length == 0) {%>
-    <h2>Não há cadastro.</h2>
-    <%} else {%>
-    <h1>Cadastros Salvos: </h1>
-        <% cadastros.forEach(cadastro => {%>
-          <a href="/visualizar?nome=<%=cadastro%>"><%=cadastro.split(".txt")[0]%></a>
-          <a href="/deletarCadastro?nome=<%=cadastro%>">DELETAR</a>
-          <br>
-        <%})%>
-    <%}%>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastros.css">
+    <title>Cadastros Salvos</title>
+  </head>
+  <body>
+    <%- include("cabecalho") %>
+    <%- include("menu") %>
 
-    <a href="/" id="returnButton">Fazer novo cadastro</a>
-</body>
-</html> 
+    <%if (typeof(cadastros) == 'undefined' || cadastros.length == 0) {%>
+      <h2>Não há cadastro.</h2>
+      <%} else {%>
+      <h1>Cadastros Salvos: </h1>
+          <% cadastros.forEach(cadastro => {%>
+            <div id="cadastroList">
+              <a class="infoButton" href="/visualizar?nome=<%=cadastro%>"><%=cadastro.split(".txt")[0]%></a>
+              <a class="sideButton" href="/deletarCadastro?nome=<%=cadastro%>"><img id="delete" src="src/delete.png" alt="delete"></a>
+              <a class="sideButton" href="/editar?nome=<%=cadastro%>"><img id="edit" src="src/edit.png" alt="edit"></a>
+              <br>
+            </div>
+          <%})%>
+      <%}%>
+
+      <a href="/" id="returnButton">Fazer novo cadastro</a>
+      <%- include("rodape") %>
+  </body>
+  </html> 

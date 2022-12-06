@@ -5,7 +5,7 @@ const app = express()
 app.use(express.urlencoded ({ extended: true }))
 app.set('view engine', 'ejs')
 
-app.use(express.static('public'))
+app.use(express.static('views/public'));
 
 // Create
 app.route('/')
@@ -40,15 +40,28 @@ app.route('/')
     })
 
   // Update
-  const rotaVisuzalizar = app.route('/visualizar')
-    rotaVisuzalizar.get((req, res) => {
+  const rotaEditar = app.route('/editar')
+    rotaEditar.get((req, res) => {
+      const arqEmail = req.query.nome
+      const conteudoEmail = fs.readFileSync(arqEmail)
+      const emailString = conteudoEmail.toString()
+      const emailObjeto = JSON.parse(emailString)
+      res.render('editar', {cadastro: emailObjeto})
+    })
+    .post((req, res) => {
+      res.render('sucesso')
+      fs.writeFileSync(req.body.email+'.txt', JSON.stringify(req.body))
+    })
+
+  // Read
+  const rotaVisualizar = app.route('/visualizar')
+    rotaVisualizar.get((req, res) => {
       const arqEmail = req.query.nome
       const conteudoEmail = fs.readFileSync(arqEmail)
       const emailString = conteudoEmail.toString()
       const emailObjeto = JSON.parse(emailString)
       res.render('visualizar', {cadastro: emailObjeto})
     })
-
   // Delete
   const rotaDeletarCadastro = app.route('/deletarCadastro')
     rotaDeletarCadastro.get((req, res) => {

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+<head>
+
+<meta charset="utf-8">
+<title>Calculadora - Resultados</title>
+<style>
+img {
+width: 20px;
+height: auto;
+}
+</style>
+</head>
+
+<body>
+<%- include('cabecalho') %>
+
+<form action="/log" method="post" id="contas">
+<label> Nome </label>
+<input id="nome" name="nome" />
+<br>
+<button type="submit">Pesquisar</button>
+</form>
+
+<% if( typeof(x) !="undefined" ){ %>
+<h3 id="mensagem" name="mensagem">
+<%=x%>
+</h3>
+<% } %>
+<div>
+<% if (typeof(logs) !="undefined" ){ %>
+<table id="tabela" name="tabela">
+<tr>
+<th>Nome</th>
+<th>Visualizar</th>
+<th>Editar</th>
+<th>Apagar</th>
+</tr>
+
+<% logs.forEach(registro=> { %>
+<tr>
+<td>
+<%=registro%>
+</td>
+
+<td style="text-align: center;"><a href="/ver?nome=<%=registro%>"><img
+src="inspect.png" /></a></td>
+<td style="text-align: center;"><a href="/editar?nome=<%=registro%>"><img
+src="edit.png" /></a></td>
+<td style="text-align: center;"><a href="/apagar?nome=<%=registro%>"><img
+src="trash.png" /></a></td>
+</tr>
+<% }) %>
+</table>
+<% } %>
+
+</div>
+<%- include('rodape') %>
+</body>
+
+</html>

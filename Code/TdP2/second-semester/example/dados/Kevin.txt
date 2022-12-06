@@ -1,0 +1,1 @@
+{"nome":"Kevin","N1":"1","N2":"2","op":"+","resultado":3}

@@ -1,0 +1,1 @@
+{"nome":"Rafael Faria Viana","nascimento":"0231-12-31","cpf":"12312312313","sexo":"M","estadoCivil":"S","telefone":"123124014","email":"rafaelfariaviana@gmail.com","senha":"123","confirmarSenha":"123","endereco":"Casa do caralho, 435"}

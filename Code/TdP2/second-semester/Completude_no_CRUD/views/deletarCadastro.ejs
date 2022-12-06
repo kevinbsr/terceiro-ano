@@ -8,6 +8,8 @@
   <title>Cadastros Salvos</title>
 </head>
 <body>
+  <%- include("cabecalho") %>
+  <%- include("menu") %>
   <%if (typeof(cadastros) == 'undefined' || cadastros.length == 0) {%>
     <h2>Não há cadastro.</h2>
     <%} else {%>

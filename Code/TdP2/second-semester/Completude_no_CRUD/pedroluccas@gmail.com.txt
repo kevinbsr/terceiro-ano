@@ -1,0 +1,1 @@
+{"nome":"Pedro Luccas Benevides Magald1","nascimento":"2019-09-23","cpf":"00000000000","sexo":"M","estadoCivil":"S","telefone":"000000000","email":"pedroluccas@gmail.com","senha":"12345678","confirmarSenha":"12345678","endereco":"Rua Salvadora Maria da Conceição, 49"}

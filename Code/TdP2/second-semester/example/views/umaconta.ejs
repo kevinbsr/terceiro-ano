@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+ <head>
+  <meta charset="UTF-8">
+  <% if (typeof(conta.resultado) == 'undefined') { %>
+  <title>Calculadora - Gravar Conta</title>
+  <% } else { %>
+  <title>Calculadora - Conta Gravada</title>
+  <% } %>
+  <script>
+   function confereOp() {
+    if (document.getElementById("op").value == '') {
+      alert('Clique para selecionar a operação!')
+      /*const form = document.getElementById("opForm");
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        alert('Clique para selecionar a operação!')
+    });*/
+    }
+   }
+   function soma() {
+    document.getElementById("op").value = '+';
+   }
+   function subtracao() {
+    document.getElementById("op").value = '-';
+   }
+   function multiplicacao() {
+    document.getElementById("op").value = 'x';
+   }
+   function divisao() {
+    document.getElementById("op").value = '/';
+   }
+   function fatorial(n) {
+    document.getElementById("opForm").method = 'post';
+    document.getElementById("opForm").action = '/fat';
+   }
+  </script>
+   <link rel="stylesheet" href="style.css">
+ </head>
+ <body>
+   <%- include("cabecalho") %>
+  <h1>Digite dois números:</h1>
+  <form method="get" action="/operacoes" id="opForm" onsubmit="confereOp()">
+    <label> Nome: </label>
+    <input id="nome" name="nome" value="<%=conta.nome%>"/>
+    <br>
+    <label> Número 1: </label>
+   <input id="n1" name="N1" value="<%=conta.N1%>"/>
+   <br>
+   <label> Número 2: </label>
+   <input id= "n2" name="N2" value="<%=conta.N2%>"/>
+   <br>
+    <label> Operação: </label>
+   <input
+   <% if (typeof(conta.resultado) == 'undefined') { %>
+    type="hidden"
+   <% } else { %>
+    readonly
+   <% } %>
+   id="op" name="op" value="<%=conta.op%>"/>
+    <br>
+
+   <button type="submit" onclick="fatorial()">Fatorial do Número 1: </button>
+   <button type="submit" onclick="soma()">Somar</button>
+   <button type="submit" onclick="subtracao()">Subtrair</button>
+   <button type="submit" onclick="multiplicacao()">Multiplicar</button>
+   <button type="submit" onclick="divisao()">Dividir</button>
+  </form>
+  <% if (typeof(conta.resultado) == 'undefined') { %>
+  <h2>Aguardando valores...</h2>
+  <% } else { %>
+  <h1>Resultado:</h1>
+  <h1 id="resultado">
+    <%=conta.resultado%>
+  </h1>
+  <% } %>
+   
+    <%- include("rodape") %>
+   
+ </body>
+</html>

@@ -1,0 +1,25 @@
+#menu {
+  display: flex;
+  flex-direction: row;
+}
+#menu a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  min-width: 16rem;
+  font-size: 1rem;
+  font-weight: 600;
+  min-height: 36px;
+  border-radius: 6px;
+  padding: 16px 16px;
+  margin-bottom: 1rem;
+  background-color: #00875f;
+  color: #e1e1e6;
+  border: none;
+  text-decoration: none;
+}
+hr {
+  width: 100%;
+  margin-block: 1rem;
+}

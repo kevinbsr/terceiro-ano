@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+
+<head>
+<meta charset="utf-8">
+<title>Calculadora</title>
+</head>
+
+<body>
+<%- include('cabecalho') %>
+Nome: <%=nome%> <br>
+Valor 1: <%=a%> <br>
+Valor 2: <%=b%> <br>
+<%=x%>
+
+<br>
+<h3><a href="/editar?nome=<%=nome%>">Editar esta conta</a> | </h3>
+<%- include('rodape') %>
+
+</body>
+
+</html>
