@@ -9,56 +9,68 @@
 </head>
 <body>
   <header>
-    <span>logo</span>
+    <span><strong>K B S R</strong></span>
 
-    <p>stories</p>
-    <p>feed</p>
-    <p>profile</p>
+    <div id="links-list">
+      <a href="">stories</a>
+      <a href="">feed</a>
+      <a href="">profile</a>
+    </div>
 
+    <button id="darkmode-button" onclick="toggleFunction()">🌞<->🌑</button>
   </header>
   <main>
     <div id="profile-info">
-      <img src="" alt="profile-photo">
-      <p>kevinbenevidesr</p>
+      <img src="./src/profile-photo.webp" alt="profile-photo">
+      <p><strong>kevinbenevidesr</strong></p>
     </div>
 
     <div id="gallery-content">
       <p>gallery</p>
       <div id="gallery-photos">
-        <img src="" alt="">
+        <img src="./src/vsco61cfd26b45777.jpg" alt="">
+        <video autoplay loop src="./src/VID-20210710-WA0022.mp4"></video>
+        <img src="./src/PXL_20210710_165336257.PORTRAIT_2.jpg" alt="">
       </div>
     </div>
   </main>
   <footer>
-    <div id="grid-1">
-      <span>logo</span>
+    <div id="grid-1" class="grid">
+      <h2>K B S R</h2>
       <p>copyright 2023 Kevin Benevides. All rights reserved</p>
     </div>
-    <div id="grid-2">
+    <div id="grid-2" class="grid">
       <h3>company</h3>
       <p>about us</p>
       <p>our product</p>
       <p>carrers</p>
     </div>
-    <div id="grid-3">
+    <div id="grid-3" class="grid">
       <h3>community</h3>
       <p>guidelines</p>
       <p>safety</p>
       <p>support</p>
       <p>forum</p>
     </div>
-    <div id="grid-4">
+    <div id="grid-4" class="grid">
       <h3>legal</h3>
       <p>terms of use</p>
       <p>privacy policy</p>
       <p>cookie notice</p>
       <p>cookies settings</p>
     </div>
-    <div id="grid-5">
+    <div id="grid-5" class="grid">
       <h3>contact</h3>
       <p>brands</p>
       <p>press</p>
     </div>
   </footer>
+
+  <script>
+    function toggleFunction() {
+       var element = document.body;
+       element.classList.toggle("dark-mode");
+    }
+    </script>
 </body>
 </html>

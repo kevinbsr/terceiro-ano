@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #fff;
+  --secondary: #737373;
+  --tertiary: #f6f6f6;
+  --text: #000;
+}
+
+:root .dark-mode {
+  --primary: #080808;
+  --secondary: #ebebeb;
+  --tertiary: #111111;
+  --text: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--primary);
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 1rem;
+  color: var(--text);
+}
+
+header #links-list {
+  display: flex;
+  flex-direction: row;
+}
+
+header #links-list a {
+  color: var(--text);
+  text-decoration: none;
+  margin-inline: 1rem;
+}
+
+header #links-list a:hover {
+  cursor: pointer;
+  color: var(--secondary);
+}
+
+header #darkmode-button {
+  border: 1px solid var(--text);
+  color: var(--text);
+  font-weight: 600;
+  background: none;
+  padding: .25rem;
+}
+
+main {
+  color: var(--text);
+}
+
+main #profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 4rem;
+}
+
+main #profile-info img {
+  height: 7.5rem;
+  border-radius: 100%;
+  margin-bottom: 0.5rem;
+}
+
+main #gallery-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+main #gallery-content #gallery-photos {
+  display: flex;
+  flex-direction: row;
+  margin: 2.5rem;
+}
+
+main #gallery-content #gallery-photos:hover {
+  cursor: pointer;
+}
+
+main #gallery-content #gallery-photos img, video {
+  height: 300px;
+  width: auto;
+  margin-inline: 1rem;
+}
+
+footer {
+  background-color: var(--tertiary);
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2.5rem;
+  color: var(--text);
+}
+
+footer .grid {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+footer #grid-1 {
+  display: flex;
+  justify-content: center;
+}
+
+footer #grid-1 span {
+  margin-bottom: 1rem;
+}
+footer .grid p {
+  color: var(--secondary);
+  margin-bottom: 0.25rem;
+}
+
+footer .grid p:hover {
+  cursor: pointer;
+  color: var(--text);
+  transition: ease-in-out 0.2s;
+}
+
+footer .grid h3 {
+  font-weight: 500;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
