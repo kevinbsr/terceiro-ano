@@ -8,13 +8,15 @@
   <title>Kevin Benevides</title>
 </head>
 <body>
-  <header>
-    <span><strong>K B S R</strong></span>
+  <div class="wrapper">
+
+    <header>
+      <span><strong>K B S R</strong></span>
 
     <div id="links-list">
-      <a href="">stories</a>
-      <a href="">feed</a>
-      <a href="">profile</a>
+      <a href="./index.html">profile</a>
+      <a href="./feed.html">feed</a>
+      <a href="./gallery.html">gallery</a>
     </div>
 
     <button id="darkmode-button" onclick="toggleFunction()">🌞<->🌑</button>
@@ -22,16 +24,19 @@
   <main>
     <div id="profile-info">
       <img src="./src/profile-photo.webp" alt="profile-photo">
-      <p><strong>kevinbenevidesr</strong></p>
+      <p><strong>Kevin Benevides da Silva</strong></p>
+      <p id="username">kevinbenevidesr</p>
+    </div>
+    <div id="profile-bio">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, velit fugiat, cum earum autem magni pariatur repellendus adipisci minima voluptatum ea praesentium tempore accusamus quasi sapiente ab animi ipsam doloribus, natus voluptatibus vero quo ex! Consequatur, eveniet? Dicta tempore recusandae laborum eius magni impedit, rerum dolorem dolor molestiae similique? Fuga dicta molestiae, earum deleniti laborum nam mollitia ex illum! Reiciendis totam earum ducimus possimus itaque repellat, temporibus non odit quasi! Vitae sunt optio explicabo repellendus, a nisi dolore laudantium eum.</p>
     </div>
 
-    <div id="gallery-content">
-      <p>gallery</p>
-      <div id="gallery-photos">
-        <img src="./src/vsco61cfd26b45777.jpg" alt="">
-        <video autoplay loop src="./src/VID-20210710-WA0022.mp4"></video>
-        <img src="./src/PXL_20210710_165336257.PORTRAIT_2.jpg" alt="">
-      </div>
+    <div id="social-networks">
+      <h3>talk to me here: </h3>
+      <p><a href="mailto:kb.kevinbenevides@gmail.com">e-mail</a></p>
+      <p><a href="https://www.linkedin.com/in/kevin-benevides-0b9491207/">linkedin</a></p>
+      <p><a href="https://www.twitter.com/kevinbenevidesr">twitter</a></p>
+      <p><a href="https://www.instagram.com/kevinbenevidesr">instagram</a></p>
     </div>
   </main>
   <footer>
@@ -39,33 +44,9 @@
       <h2>K B S R</h2>
       <p>copyright 2023 Kevin Benevides. All rights reserved</p>
     </div>
-    <div id="grid-2" class="grid">
-      <h3>company</h3>
-      <p>about us</p>
-      <p>our product</p>
-      <p>carrers</p>
-    </div>
-    <div id="grid-3" class="grid">
-      <h3>community</h3>
-      <p>guidelines</p>
-      <p>safety</p>
-      <p>support</p>
-      <p>forum</p>
-    </div>
-    <div id="grid-4" class="grid">
-      <h3>legal</h3>
-      <p>terms of use</p>
-      <p>privacy policy</p>
-      <p>cookie notice</p>
-      <p>cookies settings</p>
-    </div>
-    <div id="grid-5" class="grid">
-      <h3>contact</h3>
-      <p>brands</p>
-      <p>press</p>
-    </div>
   </footer>
-
+</div>
+  
   <script>
     function toggleFunction() {
        var element = document.body;

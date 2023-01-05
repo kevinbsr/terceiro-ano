@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>gallery</title>
+  </head>
+  <body>
+    <header>
+      <span><strong>K B S R</strong></span>
+
+      <div id="links-list">
+        <a href="./index.html">profile</a>
+        <a href="./feed.html">feed</a>
+        <a href="./gallery.html">gallery</a>
+      </div>
+
+      <button id="darkmode-button" onclick="toggleFunction()">🌞<->🌑</button>
+    </header>
+    <main>
+      <div id="gallery-content">
+        <p>gallery</p>
+        <div id="gallery-photos">
+          <img src="./src/vsco61cfd26b45777.jpg" alt="" />
+          <video autoplay loop src="./src/VID-20210710-WA0022.mp4"></video>
+          <img src="./src/PXL_20210710_165336257.PORTRAIT_2.jpg" alt="" />
+        </div>
+      </div>
+    </main>
+    <script>
+      function toggleFunction() {
+        var element = document.body
+        element.classList.toggle('dark-mode')
+      }
+    </script>
+  </body>
+</html>

@@ -76,6 +76,19 @@ main #profile-info img {
   margin-bottom: 0.5rem;
 }
 
+main #profile-info #username {
+  font-size: .875rem;
+  color: var(--secondary);
+}
+
+main #profile-bio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-inline: 25rem; */
+  margin-block: 1rem;
+}
+
 main #gallery-content {
   display: flex;
   flex-direction: column;
@@ -97,6 +110,16 @@ main #gallery-content #gallery-photos img, video {
   height: 300px;
   width: auto;
   margin-inline: 1rem;
+}
+
+.wrapper {
+  margin-right: auto; /* 1 */
+  margin-left:  auto; /* 1 */
+
+  max-width: 960px; /* 2 */
+
+  padding-right: 10px; /* 3 */
+  padding-left:  10px; /* 3 */
 }
 
 footer {
@@ -121,12 +144,13 @@ footer #grid-1 {
 footer #grid-1 span {
   margin-bottom: 1rem;
 }
-footer .grid p {
+footer .grid p, a {
+  text-decoration: none;
   color: var(--secondary);
   margin-bottom: 0.25rem;
 }
 
-footer .grid p:hover {
+footer .grid p:hover, a:hover {
   cursor: pointer;
   color: var(--text);
   transition: ease-in-out 0.2s;
