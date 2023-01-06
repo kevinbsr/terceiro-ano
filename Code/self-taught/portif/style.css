@@ -1,9 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
+/* AJUSTES GERAIS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.6rem;
+}
 :root {
+  font-size: 62.5%; /* 10px = 1rem */
+
   --primary: #fff;
-  --secondary: #737373;
-  --tertiary: #f6f6f6;
+  --secondary: #fff;
+  --tertiary: #fff;
+  /* --secondary: #737373; */
+  /* --tertiary: #f6f6f6; */
   --text: #000;
 }
 
@@ -14,50 +27,78 @@
   --text: #ffffff;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+.wrapper {
+  width: min(50rem, 100%);
+  margin-inline: 22rem;
+  padding-inline: 2.4rem;
 }
 
 body {
-  background-color: var(--primary);
+  background-color: var(--tertiary);
 }
 
-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  margin: 1rem;
-  color: var(--text);
-}
+/* ======================= CABEÇALHO ========================== */
+  /* RESET */
+  nav#navigation .wrapper * {
+    margin: 0;
+    padding: 0;
+    visibility: initial;
+    display: initial;
+    opacity: initial;
+    flex-direction: initial;
+    position: initial;
+    font-size: initial;
+    font-weight: initial;
+    transform: initial;
+    color: initial;
+    background-color: initial;
+    filter: initial;
+  }
 
-header #links-list {
-  display: flex;
-  flex-direction: row;
-}
+  nav#navigation #menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+  }
 
-header #links-list a {
-  color: var(--text);
-  text-decoration: none;
-  margin-inline: 1rem;
-}
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 1rem;
+    background-color: var(--primary);
+    color: var(--text);
+  }
 
-header #links-list a:hover {
-  cursor: pointer;
-  color: var(--secondary);
-}
+  nav #menu {
+    display: flex;
+    flex-direction: row;
+  }
 
-header #darkmode-button {
-  border: 1px solid var(--text);
-  color: var(--text);
-  font-weight: 600;
-  background: none;
-  padding: .25rem;
-}
+  header #links-list a {
+    color: var(--text);
+    text-decoration: none;
+    margin-inline: 1rem;
+  }
+
+  header #links-list a:hover {
+    cursor: pointer;
+    color: var(--text);
+  }
+
+  header #darkmode-button {
+    border: 1px solid var(--text);
+    color: var(--text);
+    font-weight: 600;
+    background: none;
+    padding: .25rem;
+  }
+
+/* CONTEÚDO PRINCIPAL */
 
 main {
+  background-color: var(--primary);
   color: var(--text);
 }
 
@@ -67,18 +108,18 @@ main #profile-info {
   align-items: center;
   justify-content: center;
 
-  margin-top: 4rem;
+  margin-top: 6.4rem;
 }
 
 main #profile-info img {
-  height: 7.5rem;
-  border-radius: 100%;
-  margin-bottom: 0.5rem;
+  height: 12rem;
+  border-radius: 50%;
+  margin-block: 1rem;
 }
 
 main #profile-info #username {
-  font-size: .875rem;
-  color: var(--secondary);
+  font-size: 1.4rem;
+  color: var(--text);
 }
 
 main #profile-bio {
@@ -86,7 +127,7 @@ main #profile-bio {
   align-items: center;
   justify-content: center;
   /* margin-inline: 25rem; */
-  margin-block: 1rem;
+  margin-block: 2.4rem;
 }
 
 main #gallery-content {
@@ -94,6 +135,23 @@ main #gallery-content {
   flex-direction: column;
   align-items: center;
   margin-top: 4rem;
+}
+
+main #social-networks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main #social-networks #links {
+  background: var(--tertiary);
+  padding: 1.5rem;
+  border: 0.5px solid var(--text);
+  border-radius: .6rem;
+  display: flex;
+  margin-block: 1rem;
+  gap: 2rem;
 }
 
 main #gallery-content #gallery-photos {
@@ -112,19 +170,12 @@ main #gallery-content #gallery-photos img, video {
   margin-inline: 1rem;
 }
 
-.wrapper {
-  margin-right: auto; /* 1 */
-  margin-left:  auto; /* 1 */
-
-  max-width: 960px; /* 2 */
-
-  padding-right: 10px; /* 3 */
-  padding-left:  10px; /* 3 */
-}
+/* RODAPÉ */
 
 footer {
   background-color: var(--tertiary);
   display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
   padding: 2.5rem;
   color: var(--text);
@@ -146,7 +197,7 @@ footer #grid-1 span {
 }
 footer .grid p, a {
   text-decoration: none;
-  color: var(--secondary);
+  color: var(--text);
   margin-bottom: 0.25rem;
 }
 
@@ -158,6 +209,6 @@ footer .grid p:hover, a:hover {
 
 footer .grid h3 {
   font-weight: 500;
-  color: var(--secondary);
+  color: var(--text);
   margin-bottom: 1rem;
 }
