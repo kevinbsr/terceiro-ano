@@ -105,15 +105,20 @@ div#jobs-presentation #jobs {
   margin-block: 2rem;
 }
 
-div#jobs-presentation #jobs img {
+div#jobs-presentation #jobs #job img {
   border-radius: .6rem;
   height: 22rem;
 }
 
+div#jobs-presentation #jobs #job p {
+  font-size: 1.4rem;
+  margin-top: .5rem;
+  color: #737373;
+}
 
 /* == FOOTER == */
 footer {
-  position: fixed;
+  /* position: fixed; */
   bottom: 0;
   
   height: 10rem;
@@ -150,4 +155,31 @@ footer #links ul li a {
 
 footer #links ul li a:hover {
   color: #000;
+}
+
+/* === RESPOSIVITY === */
+
+@media (max-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+  }
+  nav.navigation #menu {
+    display: none;
+  }
+
+  div#profile-presentation {
+    width: 100vw;
+  }
+
+  div#jobs-presentation {
+   
+  }
+
+  div#jobs-presentation h3 {
+    width: 100vw;
+  }
+
 }
